@@ -1,6 +1,6 @@
 const novaTarefa = document.getElementById('novaTarefa');
 const btnAddTarefa = document.getElementById('btnAddTarefa');
-const Listatarefa = document.getElementById('listaTarefa');
+const listaTarefa = document.getElementById('listaTarefa');
 
 btnAddTarefa.addEventListener('click', function(){
     const tarefa = novaTarefa.Value;
@@ -10,7 +10,7 @@ btnAddTarefa.addEventListener('click', function(){
 
     const li =  document.createElement('li');
     
-    li.textContent = novaTarefa;
+    li.textContent = tarefa;
     
     const botaoRemover = document.createElement('button');
     botaoRemover.textContent = "Remover";
@@ -21,7 +21,7 @@ btnAddTarefa.addEventListener('click', function(){
 
 
     li.appendChild(botaoRemover);
-    Listatarefa.appendChild(li);
+    listaTarefa.appendChild(li);
 
     novaTarefa.value = "";
     }
