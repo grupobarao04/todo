@@ -6,7 +6,7 @@ btnAddTarefa.addEventListener('click', function(){
     const tarefa = novaTarefa.Value;
    
      // se a tarefa for diferente de vazia execulta 
-    if(tarefa !=  " "){
+    if(tarefa.trin() !== " "){
 
     const li =  document.createElement('li');
     
@@ -20,7 +20,9 @@ btnAddTarefa.addEventListener('click', function(){
     });
 
 
-    li.appendChild(botaoRemover);
+    const div = document.createElement('div');
+    div.appendChild(botaoRemover);
+    li.appendChild(div);
     listaTarefa.appendChild(li);
 
     novaTarefa.value = "";
